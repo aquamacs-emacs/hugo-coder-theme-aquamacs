@@ -1,7 +1,8 @@
 <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="{{ .Site.BaseURL | relLangURL }}">
-      {{ .Site.Title }}
+          {{ $logoimg := resources.Get "img/aquamacs-logo@2x.png" }}
+          <img src="{{ $logoimg.RelPermalink }}" alt="Aquamacs logo" width="260">
     </a>
     {{ if or .Site.Menus.main .Site.IsMultiLingual }}
       <input type="checkbox" id="menu-toggle" />
