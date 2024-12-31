@@ -4,37 +4,37 @@
           {{ $logoimg := resources.Get "img/aquamacs-logo@2x.png" }}
           <img src="{{ $logoimg.RelPermalink }}" alt="Aquamacs logo" width="260">
     </a>
-    {{ if or .Site.Menus.main .Site.IsMultiLingual }}
-      <input type="checkbox" id="menu-toggle" />
-      <label class="menu-button float-right" for="menu-toggle">
+    {{ if or .Site.Menus.main hugo.IsMultilingual }}
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle">
         <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
-      </label>
-      <ul class="navigation-list">
+    </label>
+    <ul class="navigation-list">
         {{ with .Site.Menus.main}}
-          {{ range sort . }}
-            <li class="navigation-item">
-              <a class="navigation-link" href="{{ index (apply (slice .URL) (.Params.urlFunc | default "relLangURL") ".") 0 }}">{{ .Name }}</a>
-            </li>
-          {{ end }}
+        {{ range sort . }}
+        <li class="navigation-item">
+            <a class="navigation-link" href="{{ index (apply (slice .URL) (.Params.urlFunc | default "relLangURL") ".") 0 }}">{{ .Name }}</a>
+        </li>
         {{ end }}
-        {{ if .Site.IsMultiLingual }}
-          {{ $node := . }}
-          {{ .Scratch.Set "separator" true }}
-          {{ range (default .Site.Home.AllTranslations .Translations) }}
-            {{ if ne $.Site.Language .Language }}
-              {{ if $node.Scratch.Get "separator" }}
-                <li class="navigation-item menu-separator">
-                  <span>|</span>
-                </li>
-                {{ $node.Scratch.Set "separator" false }}
-              {{ end }}
-              <li class="navigation-item">
-                <a href="{{ .Permalink }}">{{ .Language.LanguageName | emojify }}</a>
-              </li>
-            {{ end }}
-          {{ end }}
         {{ end }}
-      </ul>
+        {{ if hugo.IsMultilingual }}
+        {{ $node := . }}
+        {{ .Scratch.Set "separator" true }}
+        {{ range (default .Site.Home.AllTranslations .Translations) }}
+        {{ if ne $.Site.Language .Language }}
+        {{ if $node.Scratch.Get "separator" }}
+        <li class="navigation-item menu-separator">
+            <span>|</span>
+        </li>
+        {{ $node.Scratch.Set "separator" false }}
+        {{ end }}
+        <li class="navigation-item">
+            <a href="{{ .Permalink }}">{{ .Language.LanguageName | emojify }}</a>
+        </li>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+    </ul>
     {{ end }}
   </section>
 </nav>
