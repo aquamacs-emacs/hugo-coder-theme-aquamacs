@@ -30,6 +30,9 @@ other = "Na vjen keq, faqja nuk u gjet"
 [head_back]
 other = "Mund të ktheheni prapë tek <a href=\"{{ . }}\">homepage</a>."
 
+[licensed_under]
+other = "Licensed under"
+
 [powered_by]
 other = "Mundësuar nga "
 
@@ -56,3 +59,6 @@ other = "kujdes"
 
 [error]
 other = "gabim"
+
+[link_to_heading]
+other = "Link to heading"

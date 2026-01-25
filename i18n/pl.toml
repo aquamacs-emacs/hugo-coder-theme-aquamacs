@@ -30,6 +30,9 @@ other = "Wybacz, ta strona nie istnieje."
 [head_back]
 other = "Możesz wrócić na <a href=\"{{ . }}\">stronę domową</a>."
 
+[licensed_under]
+other = "Licensed under"
+
 [powered_by]
 other = "Napędzane przez"
 
@@ -56,3 +59,6 @@ other = "ostrzeżenie"
 
 [error]
 other = "błąd"
+
+[link_to_heading]
+other = "Link to heading"

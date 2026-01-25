@@ -30,6 +30,9 @@ other = "Maaf, halaman ini tidak ada."
 [head_back]
 other = "Anda dapat kembali ke <a href=\"{{ . }}\">beranda</a>."
 
+[licensed_under]
+other = "Licensed under"
+
 [powered_by]
 other = "Dipersembahkan oleh"
 
@@ -56,3 +59,6 @@ other = "warning"
 
 [error]
 other = "error"
+
+[link_to_heading]
+other = "Link to heading"

@@ -30,6 +30,9 @@ other = "Sorry, this page does not exist."
 [head_back]
 other = "You can head back to the <a href=\"{{ . }}\">homepage</a>."
 
+[licensed_under]
+other = "Licensed under"
+
 [powered_by]
 other = "Powered by"
 
@@ -56,3 +59,6 @@ other = "warning"
 
 [error]
 other = "error"
+
+[link_to_heading]
+other = "Link to heading"
