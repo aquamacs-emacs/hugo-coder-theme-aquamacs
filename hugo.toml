@@ -3,3 +3,6 @@ baseURL = "https://example.com/"
 [module]
 [module.hugoVersion]
 min = "0.124.0"
+
+[params]
+  customCSS = ["css/custom.css"]
